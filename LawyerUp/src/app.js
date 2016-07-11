@@ -14,7 +14,7 @@ var express     = require('express'),
 // Configuration
 // -------------
 app.engine('hbs', exphbs({
-  defaultLayout: 'default',
+  defaultLayout: 'main',
   extname: '.hbs',
   layoutsDir: __dirname + '/views/layouts/',
   partialsDir: __dirname + '/views/partials/'
@@ -31,10 +31,11 @@ require('./config/db');
 
 // Middleware
 // ----------
-// app.use(express.static(__dirname + '/public')); // Serve static files
-// app.use(require('./controllers/home'));
+app.use(express.static(__dirname + '/public')); // Serve static files
+app.use(require('./controllers/home'));
 // app.use('/login', require('./controllers/login'));
 // app.use('/api', require('./controllers/lawyerup'));
+// app.use('/?', require('./controllers/home'));
 
 
 // Start the server
