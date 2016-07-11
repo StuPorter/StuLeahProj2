@@ -33,6 +33,7 @@ require('./config/db');
 // ----------
 app.use(express.static(__dirname + '/public')); // Serve static files
 app.use(require('./controllers/home'));
+app.use(require('./controllers/usersReg'));
 // app.use('/login', require('./controllers/login'));
 // app.use('/api', require('./controllers/lawyerup'));
 // app.use('/?', require('./controllers/home'));
