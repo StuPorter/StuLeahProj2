@@ -14,7 +14,7 @@ var express     = require('express'),
 // Configuration
 // -------------
 app.engine('hbs', exphbs({
-  defaultLayout: 'home',
+  defaultLayout: 'main',
   extname: '.hbs',
   layoutsDir: __dirname + '/views/layouts/',
   partialsDir: __dirname + '/views/partials/'

@@ -1,9 +1,9 @@
 var express         = require('express'),
-    HomeController  = express.Router(),
-    User            = require(__dirname + '/../models/user'),
-    bcrypt          = require('bcrypt');
+    HomeController  = express.Router();
+    // User            = require(__dirname + '/../models/user'),
+    // bcrypt          = require('bcrypt');
 
-    HomeController.route('/?')
+HomeController.route('/?')
   // GET /
   // -----
   // Serve the homepage
