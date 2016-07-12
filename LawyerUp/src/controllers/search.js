@@ -1,6 +1,8 @@
 var express           = require('express'),
     SearchController  = express.Router();
-    // Lawyer            = require('../models/lawyer');
+
+
+
 
 SearchController.route('/?')
 // GET
