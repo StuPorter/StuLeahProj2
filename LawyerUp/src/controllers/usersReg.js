@@ -1,23 +1,23 @@
 var express         = require('express'),
     UserController  = express.Router(),
-    User            = require(__dirname + '/../models/user'),
+    User            = require('../models/user'),
     bcrypt          = require('bcrypt');
 
-UserController.route('/userReg')
+UserController.route('/?')
   // GET /
   // -----
   // Serve the homepage
   .get(function(req, res, next) {
     res.render('usersReg', {});
+    console.log('THIS GET FUNCTION WORKS');
   })
-
   .post(function(req, res, next) {
     bcrypt.hash(req.body.password, 10, function(err, hash) {
       // Save user inside here
       User.create({
         name:     req.body.name,
-        phone:    req.body.name,
-        email:    req.body.name,
+        phone:    req.body.phone,
+        email:    req.body.email,
         username: req.body.username,
         password: hash
       }, function(err, user) {
@@ -28,10 +28,12 @@ UserController.route('/userReg')
         } else {
           res.redirect('/search');
 
+
           ////NEED TO HAVE IT REDIRECT TO /SEARCH PAGE*************
           //////////////********************************************
 
-          console.log('the post worked')
+          console.log('THE POST FUNCTION IS WORKING')
+
         }
       });
     });
