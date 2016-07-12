@@ -1,4 +1,5 @@
 var express           = require('express'),
+    mongoose = require('mongoose');
     SearchController  = express.Router(),
     Lawyer            = require('../models/lawyer');
 
@@ -11,24 +12,41 @@ SearchController.route('/?')
   .get(function(req, res, next) {
     res.render('search',{})
   })
-
-
-
-
-//   .get(function( req, res, next) {
-//     Lawyer.find({city: 'africa'}, function (err, lawyer) {
-//       res.json(lawyer)
-//   console.log(Lawyer)
-//   res.render('home', {lawyers: lawyer})
-//   })
-// });
-    
-
-  //   console.log(req.body)
-  //   res.render('search',{
-  //     name: req.body.name,
-  //   });
-  // })
-
+  // POST
+  // -----------
+  // Search performed loop through db return results
+  .post(function(req, res, next) {
+    console.log(req.body)
+    Lawyer.find({ 
+      $and: [
+          { $or: [{divorce: true}] },
+          { $or: [{childSupport: true}]},
+          { $or: [{childCustody: true}]}
+      ]
+  }, function (err, lawyer) {
+     res.send(lawyer)
+     console.log(lawyer)
+  })
+});    
+      
 
   module.exports = SearchController;
+
+
+
+
+
+// Lawyer.find({ 
+//       city: req.body.city, 
+//       divorce: true ,
+//       childSupport: true,
+//       childCustody: true,
+
+//     }, function(err, lawyer) {
+//       res.send(lawyer)
+//       console.log(lawyer)
+//     })
+
+//   });
+
+// city: req.body.city

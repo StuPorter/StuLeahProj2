@@ -29,7 +29,10 @@ LawyerController.route('/?')
         email:            req.body.email,
         summary:          req.body.summary,
         username:         req.body.username,
-        password:         hash
+        password:         hash,
+        divorce:          req.body.divorce, 
+        childSupport:     req.body.childSupport,
+        childCustody:     req.body.childCustody
       }, function(err, lawyer) {
         if (err) {
           console.log(err);
@@ -37,6 +40,7 @@ LawyerController.route('/?')
         } else {
           res.json(lawyer);
           console.log('Lawyer post function is working')
+          console.log(req.body)
         }
       });
     });
