@@ -35,7 +35,7 @@ LawyerController.route('/?')
           console.log(err);
           res.render('/?', {error: err});
         } else {
-          res.redirect('/search');
+          res.json(lawyer);
           console.log('Lawyer post function is working')
         }
       });
