@@ -23,9 +23,15 @@ UserController.route('/userReg')
       }, function(err, user) {
         if (err) {
           console.log(err);
-          res.render('/?', {error: err});
+          res.redirect('/userReg', {error: err});
+          console.log('The error log')
         } else {
-          res.redirect('/results');
+          res.redirect('/search');
+
+          ////NEED TO HAVE IT REDIRECT TO /SEARCH PAGE*************
+          //////////////********************************************
+
+          console.log('the post worked')
         }
       });
     });
