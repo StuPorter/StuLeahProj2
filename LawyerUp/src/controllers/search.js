@@ -16,11 +16,11 @@ SearchController.route('/:id/?')
 .get(function(req, res, next) {
     var id = req.params.id
     Lawyer.findById(id, function(err, lawyer) {
+      console.log('---below is from lawyer find by id------')
       console.log(lawyer)
-      res.json(lawyer)
+      res.render('lawyerProfile',{lawyer: lawyer})
     })
   })
-
 
 
 

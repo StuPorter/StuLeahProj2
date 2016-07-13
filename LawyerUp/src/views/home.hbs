@@ -10,11 +10,14 @@
 
 <!-- Existing User log in -->
 <div>
-  <form method="post">
+  <form method="post" action='/'>
 <input type="text" name="username" placeholder="Username" />
   <br />
   <input type="password" name="password" placeholder="Password" />
   <br />
+  <input type="hidden" name="id" value="{{_id}}">
+  
+  <button class="login"><a href="/userReg/{{_id}}/?">Log In</a></button>
   </form>
 </div>
 

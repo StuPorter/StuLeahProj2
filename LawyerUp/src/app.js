@@ -8,7 +8,8 @@
 var express     = require('express'),
     app         = express(),
     exphbs      = require('express-handlebars'),
-    bodyParser  = require('body-parser');
+    bodyParser  = require('body-parser'),
+    session     = require('express-session');
 
 
 // Configuration
@@ -27,7 +28,14 @@ app.use(bodyParser.urlencoded({extended: true}))
 // -------------------
 require('./config/db');
 
-///// WE WILL HAVE TO REWRITE SOME OF THIS MIDDLEWARE nonsense
+///// Configure session middleware
+app.use(session({
+  name: 'loginsession',
+  resave: false,
+  saveUninitialized: false,
+  secret: 'befroiehqoib'
+}))
+
 
 // Middleware
 // ----------
@@ -37,9 +45,6 @@ app.use('/search', require('./controllers/search'));
 app.use('/lawyerreg', require('./controllers/lawyersreg'));
 app.use('/userreg', require('./controllers/usersReg'));
 
-// app.use('/login', require('./controllers/login'));
-// app.use('/api', require('./controllers/lawyerup'));
-// app.use('/?', require('./controllers/home'));
 
 
 // Start the server
