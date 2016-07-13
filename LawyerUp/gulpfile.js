@@ -9,6 +9,7 @@ gulp.task('less', function() {
   gulp.src('./src/public/less/style.less')
     .pipe(less())
     .pipe(gulp.dest('./src/public/css'));
+    console.log('Transpiling LESS into CSS works!!!')
 });
 
 // Run a local server

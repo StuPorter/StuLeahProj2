@@ -1,0 +1,63 @@
+/**
+ * Main Stylesheet
+ *
+ * Do not code any styles within this file.
+ *
+ * USAGE:
+ * Import all styles into this file. Start with
+ * baseline styles at the top, site styles in the
+ * middle, then mobile styles at the end.
+ */
+::selection {
+  background: #D07025;
+  color: #f7f7f7;
+}
+::moz-selection {
+  background: #D07025;
+  color: #f7f7f7;
+}
+/**
+ * Site-wide color scheme
+ */
+body {
+  background-color: #cdcccb;
+}
+h1 {
+  text-align: center;
+}
+label {
+  font-weight: bold;
+}
+.lawyerform {
+  text-align: center;
+}
+.regform {
+  text-align: center;
+  margin-right: 17.5px;
+}
+#reginfo {
+  max-width: 600px;
+  text-align: center;
+  margin-left: 300px;
+}
+.searchform {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 25px;
+}
+#locationsearch {
+  font-size: 20px;
+}
+#choosecategory {
+  font-size: 25px;
+}
+ul {
+  padding: 15px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+li {
+  display: inline-block;
+  padding: 0px 60px 0px 60px;
+  font-size: 25px;
+}
