@@ -32,7 +32,7 @@ UserController.route('/?')
           ////NEED TO HAVE IT REDIRECT TO /SEARCH PAGE*************
           //////////////********************************************
 
-          console.log('THE POST FUNCTION IS WORKING')
+          console.log('DATA RECIEVED AND PAGE REDIRECTED THE POST FUNCTION IS WORKING')
 
         }
       });

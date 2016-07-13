@@ -8,30 +8,7 @@ var express           = require('express'),
     bcrypt            = require('bcrypt'),
     fs                = require('fs');
 
-// LawyerController.route('/:id/?')
-// //SINGLE ID FIND
-// .get(function(req, res, next) {
-//     var id = req.params.id;
-//     Lawyer.findById(id, function(err, user)  {
-//       if (err) { 
-//         console.log(err);
-//       } else {
-//         // console.log('THE ID WORKED')
-//         res.json(user)
-//       }
-//     }); 
-//   })
-//  // PATCH METHOD 
-//   .patch(function(req, res, next)  {
-//     var id = req.params.id;
-//     Lawyer.findByIdAndUpdate(id, {email: 'NewEmail@gmail.com'}, function(err, user)  {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.json('A change has been made')
-//       }
-//     }); 
-//   });
+
 
 LawyerController.route('/?')
 // GET

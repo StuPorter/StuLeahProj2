@@ -6,10 +6,10 @@ var mongoose = require('mongoose');
 
 
 var LawyerSchema = new mongoose.Schema({
-  companyName:     String,
-  primaryContact:  String,
-  address1:        String,
-  address2:        String,
+  companyName:      String,
+  primaryContact:   String,
+  address1:         String,
+  address2:         String,
   city:             String,
   state:            String,
   zip:              String,
