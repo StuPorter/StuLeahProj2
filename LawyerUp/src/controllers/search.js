@@ -1,7 +1,26 @@
-var express           = require('express'),
-    mongoose = require('mongoose');
-    SearchController  = express.Router(),
-    Lawyer            = require('../models/lawyer');
+ var express           = require('express'),
+    mongoose           = require('mongoose');
+    SearchController   = express.Router(),
+    Lawyer             = require('../models/lawyer');
+
+
+
+
+
+
+
+SearchController.route('/:id/?')  
+// GET
+// ---------
+// get single lawyer from search and render info to results page
+.get(function(req, res, next) {
+    var id = req.params.id
+    Lawyer.findById(id, function(err, lawyer) {
+      console.log(lawyer)
+      res.json(lawyer)
+    })
+  })
+
 
 
 
@@ -24,11 +43,17 @@ SearchController.route('/?')
           
       ]
   }, function (err, lawyer) {
-     res.send(lawyer)
-     console.log(lawyer)
+     if (err) {
+          console.log(err);
+          res.render('/?', {error: err});
+        } else {
+          res.render('results',{ lawyer: lawyer})
+          console.log(lawyer)      
+        }
   })
 });    
-      
+
+
 
   module.exports = SearchController;
 

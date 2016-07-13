@@ -1,0 +1,16 @@
+<h1>Results page</h1>
+
+{{#each lawyer}}
+  <p> Company Name : {{companyName}}<p>
+  <p>Primary Contact : {{primaryContact}}</p>
+  <p>Address: {{address1}} {{address2}}</p>
+  <p>City: {{city}}  State: {{state}} Zip Code: {{zip}}</p>
+
+<button class="result-detail"><a href="/search/{{_id}}/?">Learn More</a></button>
+{{/each}}
+
+<!-- <form>
+  <input type="hidden" name="address" value="{{address1}}">
+
+</form>
+ -->
