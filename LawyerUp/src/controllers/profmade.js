@@ -1,5 +1,5 @@
-var express           = require('express'),
-    Lawyer            = require('../models/lawyer'),
+var express             = require('express'),
+    Lawyer              = require('../models/lawyer'),
     profmadeController  = express.Router();
 
 
@@ -14,8 +14,10 @@ profmadeController.route('/?')
     console.log('THE PROFILE HAS BEEN MADE GET FUNCTION WORKS')
   });
 
+//   //POST FUNCTION
 
-  // module.exports = profmadeController;
+
+//   // module.exports = profmadeController;
 
 
 profmadeController.route('/?')
@@ -28,7 +30,8 @@ profmadeController.route('/?')
         console.log(err);
       } else {
         console.log('GET FUNCTION WORKS FOR SELECTING SINGLE ID')
-        res.json(Lawyer)
+        // res.json(lawyer)
+        res.render('profmade',{})
       }
     }); 
   })

@@ -29,7 +29,8 @@ SearchController.route('/?')
      console.log(lawyer)
   })
 });    
-      
+
+//maybe later add IF ELSE statements for error handling
 
 
   module.exports = SearchController;
