@@ -19,9 +19,9 @@ SearchController.route('/?')
     console.log(req.body)
     Lawyer.find({ 
       $and: [
-          { $or: [{divorce: true}] },
-          { $or: [{childSupport: true}]},
-          { $or: [{childCustody: true}]}
+          { $or: [{city: req.body.city}]},
+          { $or: [{childSupport: true}, {divorce: true}, {childCustody: true} ]},
+          
       ]
   }, function (err, lawyer) {
      res.send(lawyer)
