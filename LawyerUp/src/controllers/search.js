@@ -11,11 +11,7 @@ SearchController.route('/?')
 // --------
   .get(function(req, res, next) {
     res.render('search',{})
-<<<<<<< HEAD
     console.log('THE USER IS LOGGED IN GET FUNCTION WORKS')
-  });
-
-=======
   })
   // POST
   // -----------
@@ -34,7 +30,7 @@ SearchController.route('/?')
   })
 });    
       
->>>>>>> 4bd493caf240a51aae3a885fc791a07131182cc9
+
 
   module.exports = SearchController;
 
