@@ -18,7 +18,7 @@ var LawyerSchema = new mongoose.Schema({
   summary:          String,
   username:         String,
   password:         String,
-  Divorce:          Boolean,
+  divorce:          Boolean,
   childSupport:     Boolean,
   childCustody:     Boolean
 }, {

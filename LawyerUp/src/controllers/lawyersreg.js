@@ -44,8 +44,14 @@ LawyerController.route('/?')
           console.log(err);
           res.render('/?', {error: err});
         } else {
+
           res.redirect('/profmade');
           console.log('LAWYER POST FUNCTION WORKS')
+
+          // res.json(lawyer);
+          // console.log('Lawyer post function is working')
+          // console.log(req.body)
+
         }
       });
     });
