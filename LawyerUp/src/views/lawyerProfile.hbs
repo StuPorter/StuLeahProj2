@@ -1,0 +1,19 @@
+
+<div id= "main">
+  {{#with lawyer}}
+    <h2>{{companyName}}</h2>
+    
+    <h4>Primary Contact: {{primaryContact}}</h4>
+
+    <p>{{summary}}</p>
+
+    <h4>Adress:</h4>
+    <p>{{address1}}</p>
+    <p>{{address2}}</p>
+    <p>{{city}}, {{state}} {{zip}}</p>
+    <p>{{phone}}</p>
+    <p>{{email}}</p>
+    <br>
+    <input type="button" value="Back to search results" onclick="history.back(-1)" />
+  {{/with}}
+</div>

@@ -8,7 +8,8 @@
 var express     = require('express'),
     app         = express(),
     exphbs      = require('express-handlebars'),
-    bodyParser  = require('body-parser');
+    bodyParser  = require('body-parser'),
+    session     = require('express-session');
 
 
 // Configuration
@@ -28,21 +29,38 @@ app.use(bodyParser.urlencoded({extended: true}))
 require('./config/db');
 
 
+///// Configure session middleware
+app.use(session({
+  name: 'loginsession',
+  resave: false,
+  saveUninitialized: false,
+  secret: 'befroiehqoib'
+}))
+
+
 
 // Middleware
 // ----------
 app.use(express.static(__dirname + '/public')); // Serve static files
 app.use(require('./controllers/home'));
-app.use('/search',    require('./controllers/search'));
+app.use('/userreg', require('./controllers/usersReg'));
+app.use('/?', function(req, res, next) {
+  if(req.session.isLoggedIn === true) {
+    return next();
+  }else{
+    res.redirect('/?')
+  }
+})
+app.use('/search', require('./controllers/search'));
+
 app.use('/lawyerreg', require('./controllers/lawyersreg'));
-app.use('/userreg',   require('./controllers/usersReg'));
-app.use('/profmade',  require('./controllers/profmade'));
+
+// app.use('/profmade',  require('./controllers/profmade'));
 
 //USING ID to get the ID of the LAWYER REG POST
 // REQUIRING CONTROLLERS/LAWYERSREG because that
 // is where the post information is filled in***
 
-app.use('/:id/?', require('./controllers/lawyersReg'));
 
 
 

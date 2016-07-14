@@ -1,0 +1,19 @@
+<div id = "main">
+<form method = "patch" action="/userReg/:id/?">
+  {{#with user}}
+    <label>Name:</label>
+    <input type="text" placeholder="{{primaryContact}}"/>
+        
+
+    <p>Username: {{username}}</p>
+    <p>Password: {{password}}</p>
+
+    <h4>Contact Information:</h4>
+    <p>{{phone}}</p>
+    <p>{{email}}</p>
+    
+    <br>
+    <button >Update Information</button>
+  {{/with}}
+</form>
+</div>
