@@ -40,13 +40,18 @@ SearchController.route('/?')
     Lawyer.find({ 
       $and: [
           { $or: [{city: req.body.city}]},
-          { $or: [{childSupport: true}, {divorce: true}, {childCustody: true} ]},
+          { $or: [{childSupport: true}, {divorce: true}, {childCustody: true}, {elderLaw: true}, {socialSecurity: true}, 
+          {workersCompensation: true}, {citizenship: true}, {greenCards: true}, {deportation: true}, {bankruptcy: true}, {foreclosure: true},
+          {personalBankruptcy: true}, {landlord: true}, {realEstate: true}, {neighborPets: true}, {carAccidents: true},
+          {medicalMalpractice: true}, {slipOrFall: true}, {duiDwi: true}, {drugCrimes: true}, {wrongfulTermination: true},
+          {employeeBenefits: true}, {wageAndLaws: true}, {businessTaxes: true}, {personalIncomeTax: true}, {audits: true} ]},
           
       ]
   }, function (err, lawyer) {
      if (err) {
           console.log(err);
-          res.render('/?', {error: err});
+          res.render('/?', {error: err});      
+
         } else if (1 > lawyer.length) {
             
             res.render('results', {message: "There are no Lawyers that match your search criteria. Please try again."})
@@ -54,6 +59,7 @@ SearchController.route('/?')
           console.log(typeof lawyer, 'this is else', lawyer.length, 'thuis the lenght')
           res.render('results',{ lawyer: lawyer})
              
+
         }
   })
 });    
