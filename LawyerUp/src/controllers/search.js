@@ -50,10 +50,16 @@ SearchController.route('/?')
   }, function (err, lawyer) {
      if (err) {
           console.log(err);
-          res.render('/?', {error: err});
-        } else {
-          res.render('results',{lawyer: lawyer})
-          console.log(lawyer)      
+          res.render('/?', {error: err});      
+
+        } else if (1 > lawyer.length) {
+            
+            res.render('results', {message: "There are no Lawyers that match your search criteria. Please try again."})
+          } else {
+          console.log(typeof lawyer, 'this is else', lawyer.length, 'thuis the lenght')
+          res.render('results',{ lawyer: lawyer})
+             
+
         }
   })
 });    

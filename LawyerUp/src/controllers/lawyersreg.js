@@ -46,9 +46,9 @@ LawyerController.route('/?')
         } else {
           console.log('LAWYER POST FUNCTION WORKS')
           console.log(req.body)
-          res.redirect('profMade');
+          res.render('profMade', {});
           req.session.isLoggedIn = true;
-          req.session.userId = user._id;
+          req.session.userId = lawyer._id;
 
         }
       });
