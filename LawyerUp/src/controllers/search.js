@@ -52,7 +52,7 @@ SearchController.route('/?')
           console.log(err);
           res.render('/?', {error: err});
         } else {
-          res.render('results',{ lawyer: lawyer})
+          res.render('results',{lawyer: lawyer})
           console.log(lawyer)      
         }
   })
