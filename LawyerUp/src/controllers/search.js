@@ -40,7 +40,11 @@ SearchController.route('/?')
     Lawyer.find({ 
       $and: [
           { $or: [{city: req.body.city}]},
-          { $or: [{childSupport: true}, {divorce: true}, {childCustody: true} ]},
+          { $or: [{childSupport: true}, {divorce: true}, {childCustody: true}, {elderLaw: true}, {socialSecurity: true}, 
+          {workersCompensation: true}, {citizenship: true}, {greenCards: true}, {deportation: true}, {bankruptcy: true}, {foreclosure: true},
+          {personalBankruptcy: true}, {landlord: true}, {realEstate: true}, {neighborPets: true}, {carAccidents: true},
+          {medicalMalpractice: true}, {slipOrFall: true}, {duiDwi: true}, {drugCrimes: true}, {wrongfulTermination: true},
+          {employeeBenefits: true}, {wageAndLaws: true}, {businessTaxes: true}, {personalIncomeTax: true}, {audits: true} ]},
           
       ]
   }, function (err, lawyer) {
