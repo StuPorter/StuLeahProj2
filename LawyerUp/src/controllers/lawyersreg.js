@@ -46,7 +46,7 @@ LawyerController.route('/?')
         } else {
           console.log('LAWYER POST FUNCTION WORKS')
           console.log(req.body)
-          res.redirect('/profmade');
+          res.redirect('profMade');
           req.session.isLoggedIn = true;
           req.session.userId = user._id;
 
