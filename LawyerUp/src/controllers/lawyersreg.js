@@ -38,9 +38,11 @@ LawyerController.route('/?')
           console.log(err);
           res.render('/?', {error: err});
         } else {
-          res.json(lawyer);
+          res.redirect('/?');
           console.log('Lawyer post function is working')
           console.log(req.body)
+          req.session.isLoggedIn = true;
+          req.session.userId = user._id;
         }
       });
     });

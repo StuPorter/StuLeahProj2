@@ -49,11 +49,13 @@ UserController.route('/?')
        }, function(err, user) {
         if (err) {
           console.log(err);
-          res.redirect('/userReg', {error: err});
           console.log('The error log')
+          res.redirect('/userReg', {error: err});
         } else {
-          res.redirect('/search')
           console.log('THE POST FUNCTION IS WORKING');
+          req.session.isLoggedIn = true;
+          req.session.userId = user._id;
+          res.redirect('/search')
         }
       });
     });

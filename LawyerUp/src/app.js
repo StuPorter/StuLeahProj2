@@ -41,9 +41,18 @@ app.use(session({
 // ----------
 app.use(express.static(__dirname + '/public')); // Serve static files
 app.use(require('./controllers/home'));
-app.use('/search', require('./controllers/search'));
-app.use('/lawyerreg', require('./controllers/lawyersreg'));
 app.use('/userreg', require('./controllers/usersReg'));
+app.use('/?', function(req, res, next) {
+  if(req.session.isLoggedIn === true) {
+    return next();
+  }else{
+    res.redirect('/?')
+  }
+})
+app.use('/search', require('./controllers/search'));
+
+app.use('/lawyerreg', require('./controllers/lawyersreg'));
+
 
 
 
