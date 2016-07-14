@@ -27,18 +27,23 @@ app.use(bodyParser.urlencoded({extended: true}))
 // -------------------
 require('./config/db');
 
-///// WE WILL HAVE TO REWRITE SOME OF THIS MIDDLEWARE nonsense
+
 
 // Middleware
 // ----------
 app.use(express.static(__dirname + '/public')); // Serve static files
 app.use(require('./controllers/home'));
-app.use('/search', require('./controllers/search'));
+app.use('/search',    require('./controllers/search'));
 app.use('/lawyerreg', require('./controllers/lawyersreg'));
-app.use('/userreg', require('./controllers/usersReg'));
-// app.use('/login', require('./controllers/login'));
-// app.use('/api', require('./controllers/lawyerup'));
-// app.use('/?', require('./controllers/home'));
+app.use('/userreg',   require('./controllers/usersReg'));
+app.use('/profmade',  require('./controllers/profmade'));
+
+//USING ID to get the ID of the LAWYER REG POST
+// REQUIRING CONTROLLERS/LAWYERSREG because that
+// is where the post information is filled in***
+
+app.use('/:id/?', require('./controllers/lawyersReg'));
+
 
 
 // Start the server

@@ -23,10 +23,17 @@ UserController.route('/?')
       }, function(err, user) {
         if (err) {
           console.log(err);
-          res.render('/?', {error: err});
+          res.redirect('/userReg', {error: err});
+          console.log('The error log')
         } else {
           res.redirect('/search');
-          console.log('THE POST FUNCTION IS WORKING')
+
+
+          ////NEED TO HAVE IT REDIRECT TO /SEARCH PAGE*************
+          //////////////********************************************
+
+          console.log('DATA RECIEVED AND PAGE REDIRECTED THE POST FUNCTION IS WORKING')
+
         }
       });
     });

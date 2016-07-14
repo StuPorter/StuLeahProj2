@@ -6,10 +6,10 @@ var mongoose = require('mongoose');
 
 
 var LawyerSchema = new mongoose.Schema({
-  companyName:     String,
-  primaryContact:  String,
-  address1:        String,
-  address2:        String,
+  companyName:      String,
+  primaryContact:   String,
+  address1:         String,
+  address2:         String,
   city:             String,
   state:            String,
   zip:              String,
@@ -17,7 +17,10 @@ var LawyerSchema = new mongoose.Schema({
   email:            String,
   summary:          String,
   username:         String,
-  password:         String
+  password:         String,
+  divorce:          Boolean,
+  childSupport:     Boolean,
+  childCustody:     Boolean
 }, {
   strict: false
 });

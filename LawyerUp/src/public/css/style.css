@@ -1,0 +1,95 @@
+/**
+ * Main Stylesheet
+ *
+ * Do not code any styles within this file.
+ *
+ * USAGE:
+ * Import all styles into this file. Start with
+ * baseline styles at the top, site styles in the
+ * middle, then mobile styles at the end.
+ */
+::selection {
+  background: #D07025;
+  color: #f7f7f7;
+}
+::moz-selection {
+  background: #D07025;
+  color: #f7f7f7;
+}
+/**
+ * Site-wide color scheme
+ */
+body {
+  background-color: #cdcccb;
+}
+h1 {
+  text-align: center;
+}
+label {
+  font-weight: bold;
+}
+.lawyerform {
+  text-align: center;
+}
+.regform {
+  text-align: center;
+  margin-right: 17.5px;
+}
+#reginfo {
+  max-width: 600px;
+  text-align: center;
+  margin-left: 325px;
+}
+.searchform {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 25px;
+}
+#locationsearch {
+  font-size: 20px;
+}
+#choosecategory {
+  font-size: 25px;
+}
+.navbar ul {
+  padding: 15px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.navbar li {
+  display: inline-block;
+  margin-left: 150px;
+  font-size: 25px;
+}
+.footer ul {
+  padding: 15px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0);
+}
+.footer li {
+  display: inline-block;
+  margin-left: 175px;
+  font-size: 15px;
+  margin-top: 50px;
+  float: left;
+}
+.loginform {
+  margin-top: 75px;
+  text-align: center;
+}
+#homelogin {
+  margin-right: 175px;
+  font-weight: bold;
+}
+.ayo {
+  text-align: center;
+}
+.sitedescription {
+  text-align: center;
+  max-width: 460px;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+#logout-btn {
+  font-size: 20px;
+  text-decoration: purple;
+}

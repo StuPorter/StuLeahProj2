@@ -5,14 +5,18 @@
 var express           = require('express'),
     LawyerController  = express.Router(),
     Lawyer            = require('../models/lawyer'),
-    bcrypt            = require('bcrypt');
+    bcrypt            = require('bcrypt'),
+    fs                = require('fs');
+
+
 
 LawyerController.route('/?')
 // GET
 // -------
 // Render the lawyer registration page
   .get(function(req, res, next) {
-    res.render('lawyersReg',{});
+    res.render('lawyersReg', {});
+    console.log('THIS GET FUNCTION (FOR LAWYERS) WORKS')
   })  
   .post(function(req, res, next) {
     bcrypt.hash(req.body.password, 10, function(err, hash) {
@@ -29,14 +33,25 @@ LawyerController.route('/?')
         email:            req.body.email,
         summary:          req.body.summary,
         username:         req.body.username,
-        password:         hash
+        password:         hash,
+        priceRange:       req.body.priceRange,
+        divorce:          req.body.divorce,
+        childSupport:     req.body.childSupport,
+        childCustody:     req.body.childCustody
+
       }, function(err, lawyer) {
         if (err) {
           console.log(err);
           res.render('/?', {error: err});
         } else {
-          res.redirect('/search');
-          console.log('Lawyer post function is working')
+
+          res.redirect('/profmade');
+          console.log('LAWYER POST FUNCTION WORKS')
+
+          // res.json(lawyer);
+          // console.log('Lawyer post function is working')
+          // console.log(req.body)
+
         }
       });
     });
@@ -50,4 +65,4 @@ module.exports = LawyerController;
 
 
 
-// create full CRUD operations
+

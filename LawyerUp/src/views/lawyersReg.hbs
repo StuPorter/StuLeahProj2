@@ -1,41 +1,147 @@
 <h1>Create your Lawyer Profile!</h1>
+<div class="lawyerform">
 <form method="post" action="/lawyerreg">
   <label>Company Name</label>
   <input type="text" name="companyName" placeholder="Company Name">
   <br />
+  <br />
   <label>Primary Contact</label>
   <input type="text" name="primaryContact" placeholder="Primary Contact" />
   <br />
-  <label>Adress</label>
-  <input type="text" name="address1" placeholder="Adress" />
   <br />
-  <label>Adress 2</label>
-  <input type="text" name="address2" placeholder="Adress_2 Optional" />
+  <label>Address</label>
+  <input type="text" name="address1" placeholder="Address" />
+  <br />
+  <br />
+  <label>Address 2</label>
+  <input type="text" name="address2" placeholder="Address_2 Optional" />
+  <br />
   <br />
   <label>City</label>
   <input type="text" name="city" placeholder="City">
   <br />
+  <br />
   <label>State</label>
   <input type="text" name="state" placeholder="State" />
+  <br />
   <br />
   <label>Zip Code</label>
   <input type="text" name="zip" placeholder="Zip Code" />
   <br />
+  <br />
   <label>Phone</label>
   <input type="text" name="phone" placeholder="Phone">
+  <br />
   <br />
   <label>Email</label>
   <input type="email" name="email" placeholder="Email" />
   <br />
+  <br />
   <label>Summary</label>
   <input type="text" name="summary" placeholder="Tell us about your firm" />
+  <br />
   <br />
   <label>Username</label>
   <input type="text" name="username" placeholder="choose a username">
   <br />
+  <br />
   <label>Password</label>
   <input type="password" name="password" placeholder="password" />
   <br />
+  <br />
+
+  <label>Price Range</label>
+<select name="price_range">
+    <option value="$">$</option>
+    <option value="$$">$$</option>
+    <option value="$$$">$$$</option>
+    <option value="$$$$">$$$$</option>
+</select>
+
+<br />
+
+<p>Pick Your Areas of Expertise:</p>
+
+<br />
+
+<label>Family Law:</label>
+    <input class="catcheckbox" type="checkbox" value="true" name="divorce">Divorce</input>
+    <input class="catcheckbox" type="checkbox" value="true" name="childSupport">Child Support</input>
+    <input class="catcheckbox" type="checkbox" value="true" name="childCustody">Child Custody</input>
+
+
+<br />
+<!-- 
+<label>Disability:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Elder Law" name="category">Elder Law</input>
+    <input class="catcheckbox" type="checkbox" value="Social Security" name="category">Social Security</input>
+    <input class="catcheckbox" type="checkbox" value="Workers' Compensation" name="category">Workers' Compensation</input>
+
+
+<br />
+
+<label>Immigration:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Citizenship" name="category">Citizenship</input>
+    <input class="catcheckbox" type="checkbox" value="Green Cards" name="category">Green Cards</input>
+    <input class="catcheckbox" type="checkbox" value="Deportation" name="category">Deportation</input>
+
+
+<br />
+
+<label>Bankruptcy:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Bankruptcy Basics" name="category">Bankruptcy Basics</input>
+    <input class="catcheckbox" type="checkbox" value="Foreclosure" name="category">Foreclosure</input>
+    <input class="catcheckbox" type="checkbox" value="Personal Bankruptcy" name="category">Personal Bankruptcy</input>
+
+
+<br />
+
+<label>Home:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Landlord" name="category">Landlord</input>
+    <input class="catcheckbox" type="checkbox" value="Real Estate" name="category">Real Estate</input>
+    <input class="catcheckbox" type="checkbox" value="Neighbors/Pets" name="category">Neighbors/Pets</input>
+
+
+<br />
+
+<label>Personal Injury:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Car Accidents" name="category">Car Accidents</input>
+    <input class="catcheckbox" type="checkbox" value="Medical Malpractice" name="category">Medical Malpractice</input>
+    <input class="catcheckbox" type="checkbox" value="Slip or Fall" name="category">Slip or Fall</input>
+
+<br />
+
+<label>Criminal:</label>
+
+    <input class="catcheckbox" type="checkbox" value="DUI/DWI" name="category">DUI/DWI</input>
+    <input class="catcheckbox" type="checkbox" value="Drug Crimes" name="category">Drug Crimes</input>
+    <input class="catcheckbox" type="checkbox" value="Sealing Records" name="category">Sealing</input>
+
+<br />
+
+<label>Employment:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Wrongful Termination" name="category">Wrongful Termination</input>
+    <input class="catcheckbox" type="checkbox" value="Employee Benefits" name="category">Employee Benefits</input>
+    <input class="catcheckbox" type="checkbox" value="Wange and Hour Laws" name="category">Wage and Hours Laws</input>
+
+<br />
+
+<label>Taxes:</label>
+
+    <input class="catcheckbox" type="checkbox" value="Business Taxes" name="category">Business Taxes</input>
+    <input class="catcheckbox" type="checkbox" value="Personal Income Tax" name="category">Personal Income Tax</input>
+    <input class="catcheckbox" type="checkbox" value="Audits" name="category">Audits</input>
+
+<br /> -->
+<br />
+
   <!-- Insert dropdown combo box for AOE and price range -->
   <button>Register</button>
 </form>
+</div>
