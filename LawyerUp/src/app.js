@@ -5,7 +5,8 @@
 
 // Require dependencies
 // --------------------
-var express     = require('express'),
+var dotenv      = require('dotenv').config(),
+    express     = require('express'),
     app         = express(),
     exphbs      = require('express-handlebars'),
     bodyParser  = require('body-parser'),
