@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node LawyerUp/src/app.js",
     "start": "Lawyerup/src/app.js"
-
   },
   "repository": {
     "type": "git",
