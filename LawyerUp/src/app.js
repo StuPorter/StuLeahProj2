@@ -68,6 +68,6 @@ app.use('/search', require('./controllers/search'));
 
 // Start the server
 // ----------------
-var server = app.listen(process.env.PORT || 3000, function() {
+var server = app.listen(process.env.PORT || 9000, function() {
   console.log('App is running at http://localhost:' + server.address().port);
 });
