@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var connectionString = process.env.NODE_ENV === 'production' ? '  mongodb://leah:12825ln@ds021895.mlab.com:21895/lawyerup ' : 'mongodb://localhost/lawyerup';
 
+
 mongoose.connect(connectionString);
 
 mongoose.connection.on('connected', function() {
