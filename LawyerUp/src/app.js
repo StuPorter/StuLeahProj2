@@ -11,7 +11,7 @@ var dotenv      = require('dotenv').config(),
     exphbs      = require('express-handlebars'),
     bodyParser  = require('body-parser'),
     session     = require('express-session');
-
+    dotenv      = require('dotenv').config();
 
 // Configuration
 // -------------
